@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Kanban Acadêmico</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Sistema Kanban Acadêmico</h1>
+      <div class="controls">
+        <button id="new-board-btn">
+          <i class="fas fa-plus"></i> Novo Board
+        </button>
+        <select id="board-selector">
+          <option value="">Selecionar Board</option>
+        </select>
+        <!-- Adicione este botão em header, após o select do board -->
+        <button id="db-inspector-btn" class="controls-btn">
+          <i class="fas fa-database"></i> Inspetor de Dados
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div id="board-container">
+        <div id="board" class="hidden">
+          <h2 id="board-title">Nome do Board</h2>
+
+          <div id="columns-container">
+            <!-- As colunas serão adicionadas aqui via JavaScript -->
+          </div>
+
+          <div class="board-controls">
+            <button id="add-column-btn">Adicionar Coluna</button>
+            <button id="export-html-btn">Exportar HTML</button>
+            <button id="generate-report-btn">Gerar Relatório</button>
+          </div>
+        </div>
+
+        <div id="welcome-message">
+          <h2>Bem-vindo ao Sistema Kanban!</h2>
+          <p>Crie um novo board ou selecione um existente para começar.</p>
+          <button id="example-board-btn">Criar Board de Exemplo</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal para criar/editar boards -->
+    <div id="board-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Criar Novo Board</h2>
+        <form id="board-form">
+          <div class="form-group">
+            <label for="board-name">Nome do Board:</label>
+            <input type="text" id="board-name" required />
+          </div>
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal para criar/editar colunas -->
+    <div id="column-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Adicionar Coluna</h2>
+        <form id="column-form">
+          <div class="form-group">
+            <label for="column-name">Nome da Coluna:</label>
+            <input type="text" id="column-name" required />
+          </div>
+          <div class="form-group">
+            <label for="column-order">Ordem da Coluna:</label>
+            <input type="number" id="column-order" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="column-type">Tipo da Coluna:</label>
+            <select id="column-type" required>
+              <option value="INICIAL">INICIAL</option>
+              <option value="PENDENTE">PENDENTE</option>
+              <option value="FINAL">FINAL</option>
+              <option value="CANCELAMENTO">CANCELAMENTO</option>
+            </select>
+          </div>
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal para criar/editar cards -->
+    <div id="card-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Criar Card</h2>
+        <form id="card-form">
+          <div class="form-group">
+            <label for="card-title">Título:</label>
+            <input type="text" id="card-title" required />
+          </div>
+          <div class="form-group">
+            <label for="card-description">Descrição:</label>
+            <textarea id="card-description" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="card-column">Coluna:</label>
+            <select id="card-column" required>
+              <!-- Opções de coluna serão adicionadas via JavaScript -->
+            </select>
+          </div>
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal para bloquear/desbloquear cards -->
+    <div id="block-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="block-modal-title">Bloquear Card</h2>
+        <form id="block-form">
+          <div class="form-group">
+            <label for="block-reason">Motivo:</label>
+            <textarea id="block-reason" rows="4" required></textarea>
+          </div>
+          <button type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal para relatórios -->
+    <div id="report-modal" class="modal">
+      <div class="modal-content report-modal-content">
+        <span class="close">&times;</span>
+        <h2>Relatório do Board</h2>
+        <div id="report-content"></div>
+      </div>
+    </div>
+    <!-- Adicione este modal no final do corpo HTML, antes do script -->
+    <div id="db-inspector-modal" class="modal">
+      <div class="modal-content inspector-modal-content">
+        <span class="close">&times;</span>
+        <h2>Inspetor de Dados (localStorage)</h2>
+        <div class="db-tabs">
+          <button class="db-tab active" data-tab="raw">Dados Brutos</button>
+          <button class="db-tab" data-tab="boards">Boards</button>
+          <button class="db-tab" data-tab="columns">Colunas</button>
+          <button class="db-tab" data-tab="cards">Cards</button>
+        </div>
+        <div id="db-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
