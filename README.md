@@ -1,12 +1,9 @@
-🎯 Sistema Kanban Acadêmico
+# 🎯 Sistema Kanban Acadêmico
 
-Mostrar Imagem
-
-Mostrar Imagem
-
-Mostrar Imagem
-
-Mostrar Imagem
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center">
+  <img src="imagem-adicionada/titulo.png" alt="Interface do Kanban" style="width: 100%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+</div>
+  
 ---
 
 ## Um sistema completo de gerenciamento de boards Kanban com implementação em Java e interface web interativa.
