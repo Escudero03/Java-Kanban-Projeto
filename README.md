@@ -18,13 +18,13 @@ Projeto que implementa um sistema de gerenciamento no estilo Kanban, permitindo 
 
 ## 🖼️ Galeria de Imagens
 
-## 🖼️ Galeria de Imagens
-
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center">
   <img src="imagem-adicionada/teste.png" alt="Interface do Kanban" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/teste1.png" alt="Criação de Board" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+   <img src="imagem-adicionada/teste2.png" alt="Gerenciamento de Cards" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/teste3.png" alt="Fluxo de Trabalho" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/teste4.png" alt="Relatórios" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+   <img src="imagem-adicionada/teste5.png" alt="Visualização de Board" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/TESTE-3.png" alt="Monitoramento de Progresso" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/teste6.png" alt="Gestão de Colunas" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/TESTE-1.png" alt="Configuração Inicial" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
@@ -32,8 +32,7 @@ Projeto que implementa um sistema de gerenciamento no estilo Kanban, permitindo 
   <img src="imagem-adicionada/TESTE-4.png" alt="Exportação de Dados" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/TESTE-5.png" alt="Interface Web" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
   <img src="imagem-adicionada/TESTE-6.png" alt="Persistência de Dados" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
-  <img src="imagem-adicionada/teste2.png" alt="Gerenciamento de Cards" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
-  <img src="imagem-adicionada/teste5.png" alt="Visualização de Board" style="width: 45%; cursor: pointer;" onclick="this.style.width='100%'; this.style.cursor='zoom-out';" ondblclick="this.style.width='45%'; this.style.cursor='zoom-in';">
+
 
 </div>
 
